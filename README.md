@@ -6,7 +6,7 @@ Sito vetrina demo per ristorante italiano sviluppato come progetto portfolio.
 React · Vite · Tailwind CSS v4 · Framer Motion · EmailJS
 
 ## Live Demo
-[Link Vercel]
+https://osteria-del-naviglio.vercel.app/
 
 ## Note
 Progetto demo con dati fittizi. Sviluppato per dimostrare le capacità di sviluppo frontend.
