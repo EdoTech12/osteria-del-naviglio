@@ -3,7 +3,13 @@ import { motion } from "framer-motion";
 function Location() {
     return ( 
         <section className="p-4 bg-stone-900" id="dove-siamo">
-            <motion.div className="py-36">
+            <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="py-36"
+            >
                 <h2 className="font-playfair text-4xl text-white text-center">Dove siamo</h2>
                 <div className="w-16 mt-3 mb-6 mx-auto border-b-2 border-amber-700"></div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center">

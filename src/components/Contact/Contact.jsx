@@ -14,7 +14,13 @@ function Contact() {
 
     return ( 
         <section className="p-4 bg-stone-50" id="contatti">
-            <motion.div className="py-36 ">
+            <motion.div 
+                className="py-36 "
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+            >
                 <h2 className=" font-playfair text-4xl text-stone-800 text-center">Contatti</h2>
                 <div className="w-16 mt-3 mb-6 mx-auto border-b-2 border-amber-700"></div>
                 <p className="text-stone-500 text-center mb-8">Hai domande o vuoi prenotare un tavolo? Scrivici, ti risponderemo al più presto.</p>

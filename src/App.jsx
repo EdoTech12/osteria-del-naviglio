@@ -5,14 +5,15 @@ import About from "./components/About/About";
 import Location from "./components/Location/Location";
 import Menu from "./components/Menu/Menu";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 import { useState, useEffect, useRef } from "react";
 
 function App() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1023);
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const handler = () => setIsMobile(window.innerWidth < 768);
+    const handler = () => setIsMobile(window.innerWidth < 1023);
     window.addEventListener("resize", handler);
     return () => window.removeEventListener("resize", handler);
   }, []);
@@ -54,6 +55,8 @@ function App() {
       <Location />
 
       <Contact />
+
+      <Footer activeSection={activeSection} setActiveSection={setActiveSection}/>
     </main>
   )
 }

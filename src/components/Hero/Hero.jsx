@@ -13,7 +13,12 @@ function Hero({ isMobile }) {
         ["blur(0px)", "blur(10px)"]
     );
     return ( 
-        <motion.section className={`${isMobile ? "background-sm" : "background-lg p-40"} h-full`} style={{ filter }} ref={ref}>
+        <motion.section 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className={`${isMobile ? "background-sm" : "background-lg p-40"} h-full`} style={{ filter }} ref={ref}
+        >
             <div className="text-stone-100 text-7xl font-bold px-14 lg:py-4 w-fit py-36">
                 <h1 className="font-playfair">Osteria</h1>
                 <h1 className="font-playfair">Del</h1>
